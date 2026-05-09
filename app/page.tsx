@@ -9,7 +9,7 @@ import Squares from "./components/Squares/Squares";
 import GradientText from "./components/GradientText/GradientText";
 import CircularText from "./components/CircularText/CircularText";
 import ScrollVelocity from "./components/ScrollVelocity/ScrollVelocity";
-import { Instagram, Github, Facebook, Code, Server, Smartphone, Wrench } from "lucide-react";
+import { Instagram, Github, Facebook, Code, Server, Smartphone, Wrench, Mail } from "lucide-react";
 
 export default function Home() {
   return (
@@ -496,7 +496,7 @@ export default function Home() {
           />
         </div>
         <div className="container mx-auto relative z-10 px-4 w-full">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto text-center">
             <AnimatedContent
               distance={150}
               direction="vertical"
@@ -510,38 +510,9 @@ export default function Home() {
                 Let's <span className="text-[#C6F10E]">Connect</span>
               </h2>
               <p className="text-gray-300 text-center mb-8 sm:mb-12 text-sm sm:text-base md:text-lg">
-                I'm always interested in hearing about new projects and opportunities.
+                Ada pertanyaan atau ingin berkolaborasi? Hubungi saya melalui email.
               </p>
             </AnimatedContent>
-
-            <div className="space-y-3 sm:space-y-4 lg:space-y-6">
-              {[
-                { label: 'Email', value: 'your@email.com' },
-                { label: 'Phone', value: '+62 XXX XXX XXXX' },
-                { label: 'Location', value: 'Indonesia' },
-              ].map((contact) => (
-                <AnimatedContent
-                  key={contact.label}
-                  distance={150}
-                  direction="horizontal"
-                  reverse={false}
-                  config={{ tension: 80, friction: 20 }}
-                  initialOpacity={0.2}
-                  animateOpacity
-                  threshold={0.2}
-                >
-                  <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-white bg-opacity-5 rounded-lg hover:bg-opacity-10 transition-all duration-300">
-                    <div className="w-10 sm:w-12 h-10 sm:h-12 bg-[#C6F10E] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-black font-bold text-sm sm:text-base">{contact.label[0]}</span>
-                    </div>
-                    <div className="min-w-0">
-                      <p className="text-gray-400 text-xs sm:text-sm">{contact.label}</p>
-                      <p className="text-white text-sm sm:text-base md:text-lg font-semibold break-words">{contact.value}</p>
-                    </div>
-                  </div>
-                </AnimatedContent>
-              ))}
-            </div>
 
             <AnimatedContent
               distance={150}
@@ -552,80 +523,59 @@ export default function Home() {
               animateOpacity
               threshold={0.2}
             >
-              <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
-                <GradientText
-                  colors={["#40ffaa", "#C6F10E", "#40ffaa", "#C6F10E", "#40ffaa"]}
-                  animationSpeed={3}
-                  showBorder={false}
-                  className="px-4 sm:px-6 md:px-8 py-3 sm:py-4 md:py-6 rounded-lg border inline-block cursor-pointer hover:scale-105 transition-transform text-sm sm:text-base md:text-lg whitespace-nowrap"
+              <div className="mb-12">
+                <a
+                  href="mailto:faizaiza75@gmail.com?subject=Hubungi%20Saya&body=Halo%20Faiza%2C%20saya%20ingin%20berbicara%20dengan%20Anda%20tentang..."
+                  className="inline-flex items-center gap-3 px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-[#C6F10E] to-[#40ffaa] text-black rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 font-bold text-base sm:text-lg"
                 >
-                  Get In Touch
-                </GradientText>
+                  <Mail size={28} />
+                  Kirim Email
+                </a>
+              </div>
+            </AnimatedContent>
 
-                <div className="flex gap-4 sm:gap-6">
-                  <AnimatedContent
-                    distance={150}
-                    direction="vertical"
-                    reverse={false}
-                    config={{ tension: 80, friction: 20 }}
-                    initialOpacity={0.2}
-                    animateOpacity
-                    threshold={0.2}
-                  >
-                    <a 
-                      href="https://instagram.com/zhaaa_1" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
-                    >
-                      <div className="w-full h-full bg-[#19222D] rounded-md flex items-center justify-center">
-                        <Instagram size={24} className="text-[#C6F10E]" />
-                      </div>
-                    </a>
-                  </AnimatedContent>
+            <AnimatedContent
+              distance={150}
+              direction="vertical"
+              reverse={false}
+              config={{ tension: 80, friction: 20 }}
+              initialOpacity={0.2}
+              animateOpacity
+              threshold={0.2}
+            >
+              <div className="flex justify-center gap-4 sm:gap-6">
+                <a 
+                  href="https://instagram.com/zhaaa_1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div className="w-full h-full bg-[#19222D] rounded-md flex items-center justify-center">
+                    <Instagram size={24} className="text-[#C6F10E]" />
+                  </div>
+                </a>
 
-                  <AnimatedContent
-                    distance={150}
-                    direction="vertical"
-                    reverse={false}
-                    config={{ tension: 80, friction: 20 }}
-                    initialOpacity={0.2}
-                    animateOpacity
-                    threshold={0.2}
-                  >
-                    <a 
-                      href="https://github.com/Zhaaa01" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
-                    >
-                      <div className="w-full h-full bg-[#19222D] rounded-md flex items-center justify-center">
-                        <Github size={24} className="text-[#C6F10E]" />
-                      </div>
-                    </a>
-                  </AnimatedContent>
+                <a 
+                  href="https://github.com/Zhaaa01" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div className="w-full h-full bg-[#19222D] rounded-md flex items-center justify-center">
+                    <Github size={24} className="text-[#C6F10E]" />
+                  </div>
+                </a>
 
-                  <AnimatedContent
-                    distance={150}
-                    direction="vertical"
-                    reverse={false}
-                    config={{ tension: 80, friction: 20 }}
-                    initialOpacity={0.2}
-                    animateOpacity
-                    threshold={0.2}
-                  >
-                    <a 
-                      href="https://facebook.com/faiza.rizalul.fikri" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
-                    >
-                      <div className="w-full h-full bg-[#19222D] rounded-md flex items-center justify-center">
-                        <Facebook size={24} className="text-[#C6F10E]" />
-                      </div>
-                    </a>
-                  </AnimatedContent>
-                </div>
+                <a 
+                  href="https://facebook.com/faiza.rizalul.fikri" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg hover:scale-110 transition-all duration-300 flex items-center justify-center"
+                >
+                  <div className="w-full h-full bg-[#19222D] rounded-md flex items-center justify-center">
+                    <Facebook size={24} className="text-[#C6F10E]" />
+                  </div>
+                </a>
               </div>
             </AnimatedContent>
           </div>
