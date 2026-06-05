@@ -142,9 +142,15 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
-              { title: 'Project 1', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-1', image: '/assets/project1.png' },
-              { title: 'Project 2', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-2', image: '/assets/project2.png' },
-              { title: 'Project 3', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-3', image: '/assets/project3.png' },
+              { 
+                title: 'SpecSync', 
+                description: 'Platform perbandingan smartphone. Bandingkan spesifikasi secara detail, baca ulasan nyata, dan beli dengan percaya diri.', 
+                tech: ['PHP', 'MySQL', 'Gemini + GSMArena Scrapper'], 
+                github: 'https://github.com/Zhaaa01/SpecSync', 
+                image: '/assets/lanyard/specsync-preview.png' 
+              },
+              { title: 'Project 2', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-2', image: '/assets/lanyard/project2.png' },
+              { title: 'Project 3', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-3', image: '/assets/lanyard/project3.png' },
             ].map((project) => (
               <AnimatedContent
                 key={project.title}
@@ -158,11 +164,25 @@ export default function Home() {
               >
                 <div className="bg-gradient-to-br from-[#C6F10E] to-[#40ffaa] p-1 rounded-lg hover:shadow-lg transition-all duration-300 h-full overflow-hidden">
                   <div className="bg-[#19222D] rounded-lg h-full flex flex-col">
-                    <div className="relative w-full h-40 bg-gray-800 flex items-center justify-center overflow-hidden group">
-                      <div className="w-full h-full bg-gradient-to-br from-[#444A29] to-[#2a2f1f] flex items-center justify-center">
-                        <span className="text-gray-500 text-sm">Project Image</span>
-                      </div>
-                      <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                    <div className="relative w-full h-64 bg-gray-800 flex items-center justify-center overflow-hidden group">
+                      {project.image && project.image !== '/assets/lanyard/project2.png' && project.image !== '/assets/lanyard/project3.png' ? (
+                        <>
+                          <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover object-top"
+                          />
+                          <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="w-full h-full bg-gradient-to-br from-[#444A29] to-[#2a2f1f] flex items-center justify-center">
+                            <span className="text-gray-500 text-sm">Project Image</span>
+                          </div>
+                          <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                        </>
+                      )}
                     </div>
                     <div className="p-4 sm:p-6 flex flex-col flex-grow">
                       <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3">{project.title}</h3>
@@ -417,23 +437,23 @@ export default function Home() {
                 institution: 'Universitas Pamulang',
                 year: '2026',
                 details: 'Degree in Information Technology',
-                image: '/assets/universitas-pamulang.png'
+                image: null
               },
               {
-                title: 'TOEFL Certificate',
-                institution: 'TOEFL Test',
-                score: '425',
-                year: '2024',
-                details: 'Test of English as a Foreign Language',
-                image: '/assets/toefl-certificate.png'
+                title: 'TOEFL Prediction Test Certificate',
+                institution: 'Lembaga Bahasa Universitas Pamulang (LBU)',
+                score: '397',
+                year: '2026',
+                details: 'TOEFL Prediction Test — Level: Beginner. Valid until 20th March 2028.',
+                image: '/assets/lanyard/SERTIFIKAT-TOEFL.jpg'
               },
               {
-                title: 'N5 Nattest Certificate',
-                institution: 'Nattest Japanese Language',
-                score: '000',
-                year: '2024',
-                details: 'Japanese Language Proficiency N5 Level',
-                image: '/assets/nattest-certificate.png'
+                title: 'N5 NAT-TEST Certificate',
+                institution: 'Japanese Language NAT-TEST Steering Committee',
+                score: 'Level 5',
+                year: '2020',
+                details: 'Japanese Language Proficiency — JLPT N5 Equivalent (2020-3 NAT-TEST)',
+                image: '/assets/lanyard/Sertifikat-Nattest.jpeg'
               },
             ].map((edu, index) => (
               <AnimatedContent
@@ -451,10 +471,24 @@ export default function Home() {
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-0">
                       {/* Image Section */}
                       <div className="relative w-full h-48 sm:h-full bg-gray-800 flex items-center justify-center overflow-hidden group sm:col-span-1">
-                        <div className="w-full h-full bg-gradient-to-br from-[#444A29] to-[#2a2f1f] flex items-center justify-center">
-                          <span className="text-gray-500 text-sm">Certificate Image</span>
-                        </div>
-                        <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                        {edu.image ? (
+                          <>
+                            <Image
+                              src={edu.image}
+                              alt={edu.title}
+                              fill
+                              className="object-cover object-center"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-10 transition-all duration-300"></div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="w-full h-full bg-gradient-to-br from-[#444A29] to-[#2a2f1f] flex items-center justify-center">
+                              <span className="text-gray-500 text-sm">Certificate Image</span>
+                            </div>
+                            <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                          </>
+                        )}
                       </div>
                       
                       {/* Content Section */}
@@ -465,7 +499,7 @@ export default function Home() {
                         <div className="flex gap-4">
                           {edu.score && (
                             <div>
-                              <p className="text-gray-400 text-xs sm:text-sm">Score</p>
+                              <p className="text-gray-400 text-xs sm:text-sm">Score / Level</p>
                               <p className="text-[#40ffaa] font-bold text-base sm:text-lg">{edu.score}</p>
                             </div>
                           )}
@@ -527,7 +561,7 @@ export default function Home() {
                 <a
                   href="mailto:faizaiza75@gmail.com?subject=Hubungi%20Saya&body=Halo%20Faiza%2C%20saya%20ingin%20berbicara%20dengan%20Anda%20tentang..."
                   className="inline-flex items-center gap-3 px-8 sm:px-12 py-4 sm:py-6 bg-gradient-to-r from-[#C6F10E] to-[#40ffaa] text-black rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 font-bold text-base sm:text-lg"
-                >
+>
                   <Mail size={28} />
                   Kirim Email
                 </a>
