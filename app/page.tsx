@@ -149,7 +149,11 @@ export default function Home() {
                 github: 'https://github.com/Zhaaa01/SpecSync', 
                 image: '/assets/lanyard/specsync-preview.png' 
               },
-              { title: 'Project 2', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-2', image: '/assets/lanyard/project2.png' },
+              { title: 'Easy Xampp Manager', 
+                description: 'Cara simple Untuk mengelola XAMPP di Windows. Mulai, hentikan, dan kelola server lokal Anda dengan mudah melalui antarmuka yang intuitif.', 
+                tech: ['Node.js', 'Electron'], 
+                github: 'https://github.com/Zhaaa01/Easy-Xampp-Manager', 
+                image: '/assets/lanyard/1-xampp.png' },
               { title: 'Project 3', description: 'Describe your project here', tech: ['React', 'Next.js'], github: 'https://github.com/your-username/project-3', image: '/assets/lanyard/project3.png' },
             ].map((project) => (
               <AnimatedContent
