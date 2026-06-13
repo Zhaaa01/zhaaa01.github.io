@@ -144,13 +144,13 @@ export default function Home() {
             {[
               { 
                 title: 'SpecSync', 
-                description: 'Platform perbandingan smartphone. Bandingkan spesifikasi secara detail, baca ulasan nyata, dan beli dengan percaya diri.', 
+                description: 'Smartphone comparison platform. Compare specifications in detail, read real reviews, and buy with confidence', 
                 tech: ['PHP', 'MySQL', 'Gemini + GSMArena Scrapper'], 
                 github: 'https://github.com/Zhaaa01/SpecSync', 
                 image: '/assets/lanyard/specsync-preview.png' 
               },
               { title: 'Easy Xampp Manager', 
-                description: 'Cara simple Untuk mengelola XAMPP di Windows. Mulai, hentikan, dan kelola server lokal Anda dengan mudah melalui antarmuka yang intuitif.', 
+                description: 'A simple way to manage XAMPP on Windows. Start, stop, and manage your local server easily through an intuitive interface.', 
                 tech: ['Node.js', 'Electron'], 
                 github: 'https://github.com/Zhaaa01/Easy-Xampp-Manager', 
                 image: '/assets/lanyard/1-xampp.png' },
